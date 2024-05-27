@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Os">
         <meta name="description" content="Odin recipes is the first project in the odin project foundations course">
-        <meta name="theme-color" content="#232323">
+        <!-- <meta name="theme-color" content="#232323"> not supported in firefox -->
         <meta name="color-scheme" content="light"> 
         <meta http-equiv="x-ua-compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html">
@@ -17,7 +17,24 @@
     </head>
     <body>
         <header>
-            <h1>Odin recipes</h1>
+            <h1 id="top">Odin recipes</h1>
+            <figure>
+                <img width="700" height="auto" src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hero banner featuring fruits and vegetables">
+                <figcaption>
+                    image by <a href="https://unsplash.com/@brookelark" title="Brooke Lark">Brooke Lark</a> via <a href="https://unsplash.com/" title="unsplash.com">unsplash.com</a>
+                </figcaption>
+            </figure>
         </header>
+        <main>
+            <section>
+                <h2>Our popular recipes</h2>
+                <ul>
+                    <li><a href="/recipes/lasagna" title="lasagna">Lasagna</a></li>
+                    <li><a href="/recipes/pasta" title="pasta">Pasta</a></li>
+                    <li><a href="/recipes/pizza" title="pizza">Pizza</a></li>
+                </ul>
+                <a href="#top">go to top</a>
+            </section>
+        </main>
     </body>
 </html>
