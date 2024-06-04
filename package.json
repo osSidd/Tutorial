@@ -1,0 +1,8 @@
+{
+    "name": "tutorial_projects",
+    "description": "Projects from web dev tutorials",
+    "scripts":{
+        "py-server": "python -m http.server",
+        "php-server": "php -S localhost:3000"
+    }
+}
