@@ -1,7 +1,7 @@
 # Tutorial projects
 ```
     mermaid
-    seauenceDiagram
-        a->>b:How are you?
-        b-->>a:Fine
+    seauenceDiagram;
+        a->>b:How are you?;
+        b-->>a:Fine;
 ```
