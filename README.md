@@ -1,6 +1,6 @@
 # Tutorial projects
 ```mermaid
-    seauenceDiagram;
+    sequenceDiagram;
         a->>b:How are you?;
         b-->>a:Fine;
 ```
