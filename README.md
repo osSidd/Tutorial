@@ -2,5 +2,6 @@
 ```
     mermaid
     seauenceDiagram
-        a --> b
+        a->>b:How are you?
+        b-->>a:Fine
 ```
