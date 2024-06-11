@@ -8,20 +8,9 @@ body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.figure-container{
-    height: 400px;
-    background-color: tan;
-    overflow: hidden;
-}
 
-.figure-container *{
-    display: block;
-    margin: auto;
-    width: 100%;
-}
-
-.figure-container img{
-    object-fit: fill;
+img{
+    /* object-fit: cover; */
 }
 
 .recipes{
