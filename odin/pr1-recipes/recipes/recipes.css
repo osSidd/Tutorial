@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap:10px;
+}
+
+.nav ul li:first-child{
+    margin-right: auto;
+}
+
+.nav ul li a, .nav ul li{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    color: #2b2c5e;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav ul li a{
+    text-decoration: underline;
+}
+
+.heading{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.heading::before{
+    content: "Recipe: ";
+}
+
+main{
+    min-width: 300px;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+figure{
+    margin: 0 auto;
+    width: 800px;
+}
+
+img{
+    margin:auto;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+main p{
+    line-height: 1.35rem;
+    letter-spacing: 1.25px;
+}
