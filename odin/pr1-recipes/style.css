@@ -43,7 +43,7 @@ img{
 
 .recipes{
     text-align: center;
-    margin-top: 75px;
+    margin: 75px auto;
 }
 
 .recipes h2{
@@ -58,7 +58,7 @@ ul{
     align-items: center;
 }
 
-.recipes a{
+.recipes ul a{
     color:gray;
     text-decoration: none;
     width: 200px;
@@ -84,7 +84,6 @@ ul p{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.go-top{
-    text-align: center;
-    width: 100%;
+.go-top, .go-back{
+    margin: 1rem;
 }
