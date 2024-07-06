@@ -1,0 +1,201 @@
+html{
+    --dark-background: #1f2937;
+    --header-primary-text: #f9faf8;
+    --header-secondary-text: #e5e7eb;
+    --btn-color: #3882f6;
+    --main-section-text: #1f2937;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+
+}
+
+.sign-up-btn{
+    text-decoration: none;
+    background-color: var(--btn-color);
+    color: var(--header-primary-text);
+    font-weight: 600;
+    padding: 8px 28px;
+    border-radius: 8px;
+}
+
+/* header */
+header{
+    background-color: var(--dark-background);
+    padding: 2rem 5rem 7.5rem;
+}
+
+/* navbar */
+.nav-bar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-bar ul a{
+    text-decoration: none;
+    color: var(--header-secondary-text);
+}
+
+.nav-bar ul li:first-child{
+    margin-right: auto;
+}
+
+.nav-bar .logo{
+    color: var(--header-primary-text);
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.nav-bar ul li+li{
+    margin-left: 2rem;
+}
+
+
+/*hero section*/
+.hero-section{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 7.5rem;
+}
+
+.hero-text{
+    width: 40%;
+}
+
+.hero-title{
+    color: var(--header-primary-text);
+    font-size: 48px;
+    font-weight:800;
+    margin:0;
+}
+
+.hero-description{
+    color: var(--header-secondary-text);
+    font-size: 18px;
+}
+
+.hero-btn{
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.placeholder-img{
+    background-color: var(--header-secondary-text);
+    width: 50%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*main*/
+/* random info section */
+.random-info{
+    background-color: white;
+    padding: 5rem;
+}
+
+.random-info .sub-heading{
+    text-align: center;
+    font-size: 36px;
+    color: var(--main-section-text);
+}
+
+.figure-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.figure-container figure{
+    width: 175px;
+    text-align: center;
+}
+
+.figure-container figcaption{
+    color: var(--main-section-text);
+    margin-top: 5px;
+}
+
+.fig{
+    width: 175px;
+    height: 175px;
+    border-radius: 16px;
+    border: 5px solid var(--btn-color);
+}
+
+
+/*quote section*/
+.quote-section{
+    padding: 7.5rem 7rem;
+    background-color: var(--header-secondary-text);
+}
+
+.quote-section blockquote{
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dark-background);
+}
+
+.quote-section cite{
+    text-align: right;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    padding-right: 3rem;
+}
+
+
+/*footer section*/
+/*action section*/
+.action-section{
+    padding: 7.5rem 5rem;  
+}
+
+.action-container{
+    background-color: var(--btn-color);
+    border-radius: 8px;
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.action-container p:first-child{
+    font-size: 24px;
+    color: var(--header-primary-text);
+    font-weight: 700;
+}
+
+.action-container p:last-child{
+    color: var(--header-secondary-text);
+    margin-top: -1rem;
+}
+
+.action-btn{
+    border: 2px solid var(--header-primary-text)
+}
+
+/*copyright-section*/
+.copyright-section{
+    background-color: var(--dark-background);
+    color: var(--header-secondary-text);
+    padding: 2rem 0;
+    text-align: center;
+}
