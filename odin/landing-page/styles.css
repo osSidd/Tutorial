@@ -13,7 +13,7 @@ html{
 
 body{
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1920px;
     width: 100%;
 
 }
@@ -61,7 +61,6 @@ header{
     margin-left: 2rem;
 }
 
-
 /*hero section*/
 .hero-section{
     display: flex;
@@ -100,7 +99,6 @@ header{
     align-items: center;
     justify-content: center;
 }
-
 
 /*main*/
 /* random info section */
@@ -198,4 +196,103 @@ header{
     color: var(--header-secondary-text);
     padding: 2rem 0;
     text-align: center;
+}
+
+/* media queries for mid size device */
+@media(max-width: 975px){
+    /* navbar section */
+    .nav-bar ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-bar ul li:first-child{
+        margin-right: 0;
+    }
+
+    .nav-bar ul li+li{
+        margin-left: 0;
+    }
+
+    /* hero section */
+    .hero-section{
+        flex-direction: column;
+        align-items: center;
+        gap:2rem;
+    }
+
+    .hero-text{
+        width: 100%;
+        text-align: center;
+    }
+
+    /* main */
+    /* random info section */
+    .figure-container{
+        flex-wrap: wrap;
+    }
+
+    /* quote section */
+    .quote-section{
+        padding: 5rem;
+    }
+
+    .quote-section blockquote{
+        font-size: 24px;
+    }
+
+    /* footer */
+    /* action section */
+    .action-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap:1rem;
+    }
+}
+
+/* media queries for small size device */
+@media(max-width: 600px){
+    .header, .random-info, .quote-section, .action-section{
+        padding: 2rem;
+    }
+    /* header section */
+    /* hero section */
+    .hero-title{
+        font-size: 32px;
+    }
+
+    .placeholder-img{
+        width: 100%;
+    }
+
+    /* main */
+    /* random info section */
+    .random-info .sub-heading{
+        font-size: 24px;
+    }
+
+    /* quote section */
+    .quote-section blockquote{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .quote-section cite{
+        padding-right: 0;
+        font-size: 18px;
+    }
+
+    /* footer */
+    /* action section */
+    .action-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap:1rem;
+    }
 }
