@@ -20,13 +20,13 @@
         </header>
         <main>
             <form id="survey-form">
-                <fieldset>
+                <fieldset class="fieldset-1">
                 <div>
-                    <label for="name">name</label>
+                    <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name">
                 </div>
                 <div>
-                    <label for="email">email</label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email">
                 </div>
                 <div>
@@ -47,12 +47,20 @@
                 </fieldset>
                 <fieldset>
                     <legend>Would you recommend freeCodeCamp to a friend?</legend>
+                    <div>
                     <input type="radio" name="recommend" id="definitely" value="definitely" checked>
                     <label for="definitely">definitely</label>
+                    </div>
+
+                    <div>
                     <input type="radio" name="recommend" id="maybe" value="maybe">
                     <label for="maybe">maybe</label>
+                    </div>
+
+                    <div>
                     <input type="radio" name="recommend" id="notsure" value="not sure">
                     <label for="notsure">not sure</label>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>What is your favorite feature of freeCodeCamp?</legend>
@@ -126,7 +134,7 @@
                 </fieldset>
                 <fieldset>
                     <legend>Any comments or suggestions?</legend>
-                    <textarea name="comments" id="comments" placeholder="Enter your comment here..."></textarea>
+                    <textarea rows="6" name="comments" id="comments" placeholder="Enter your comment here..."></textarea>
                 </fieldset>
                 <button type="submit" id="submit">submit</button>
             </form>
