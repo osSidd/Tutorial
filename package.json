@@ -2,7 +2,7 @@
     "name": "tutorial_projects",
     "description": "Projects from web dev tutorials",
     "scripts":{
-        "py-server": "python -m http.server",
+        "py-server": "python3 -m http.server",
         "php-server": "php -S localhost:3000"
     }
 }

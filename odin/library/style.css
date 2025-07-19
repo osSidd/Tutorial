@@ -1,0 +1,7 @@
+.book-div{
+    display: flex;
+}
+
+.book-div *{
+    margin-right: 1rem;
+}
