@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-container{
+    width: 30vw;
+    height: 30vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(3, 1fr);
+    gap: 2px;
+}
+.tiles{
+    border: 1px solid brown;
+    background-color: aliceblue;
+    cursor: pointer;
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tiles:hover{
+    background-color: azure;
+}

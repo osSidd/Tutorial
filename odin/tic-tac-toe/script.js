@@ -6,15 +6,45 @@ const Player = function(name, marker){
 }
 
 const Gameboard = (function(){
-    const gameboard = Array.from(new Array(9), () => undefined)
+    const gameboard = generateGameboard()
 
     const player1 = Player('Sam', 'x')
     const player2 = Player('John', 'o')
 
-    return {gameboard, player1, player2}
+    let moveCounter = 0
+
+    return {gameboard, moveCounter, player1, player2}
 })()
 
-function playGame(){
+const Gameover = (function(){
+    const status = false
+    return {status}
+})()
+
+function playRound(){
+    
+    togglePlayerTurn()
+
+    if(Gameboard.moveCounter >= 5){
+        const {result, marker} = checkWin(Gameboard.gameboard)
+
+        if(Gameboard.moveCounter >= 9 && !result){
+            alert('Game tied')
+            Gameover.status = true
+            return
+        }
+        
+        if(result){
+            if(Gameboard.player1.marker === marker) alert('Player 1 wins')
+            else alert('Player 2 wins')
+            Gameover.status = true
+            return
+        }
+    }
+}
+
+function checkWin(gameArr){
+
     const winCombination = [
         [0,1,2],
         [3,4,5],
@@ -25,51 +55,11 @@ function playGame(){
         [0,4,8],
         [2,4,6]
     ]
-
-    let playerTurn = 1
-    let moveCounter = 0
-
-    while (true){
-
-        if(moveCounter >= 5){
-            const {result, marker} = checkWin(winCombination, Gameboard.gameboard)
-
-            if(moveCounter >= 9 && !result){
-                console.log('Game tied')
-                return
-            }
-            
-            if(result){
-                if(Gameboard.player1.marker === marker) console.log('Player 1 wins')
-                else console.log('Player 2 wins')
-                return
-            }
-            
-        }
-
-        const {spot, move} = playRound(playerTurn)
-
-        if(!Gameboard.gameboard[spot] && 0 <= spot && spot < 9){
-            Gameboard.gameboard[spot] = move
-            playerTurn = playerTurn > 1 ? 1 : 2
-    
-            moveCounter++
-
-        }
-        else{
-            alert('Spot unavailable, re-enter')
-        }
-
-        console.log(Gameboard.gameboard)
-    }
-}
-
-function checkWin(winArr, gameArr){
     
     let result = false
     let marker = undefined
 
-    winArr.forEach(arr => {
+    winCombination.forEach(arr => {
         const marker1 = gameArr[arr[0]]
         const marker2 = gameArr[arr[1]]
         const marker3 = gameArr[arr[2]]
@@ -85,10 +75,78 @@ function checkWin(winArr, gameArr){
     return {result, marker}
 }
 
-function playRound(player){
-    const spot = +prompt("Select spot")
-    const move = prompt(`player ${player} enter your move`)
-    return {spot, move}
+const playerMove = (function(){
+    const marker = Gameboard.player1.marker
+    const spot = null
+    const playerOneTurn = true
+
+    return {marker, spot, playerOneTurn}
+})()
+
+function generateGameboard(){
+    return Array.from(new Array(9), () => undefined)
 }
 
-playGame()
+function togglePlayerTurn(){
+    let marker
+    let turn
+    
+    if (playerMove.playerOneTurn){
+        marker = Gameboard.player2.marker
+        turn = false
+    }else{
+        marker = Gameboard.player1.marker
+        turn = true
+    }
+
+    playerMove.marker = marker
+    playerMove.playerOneTurn = turn
+}
+
+function checkMove(spot){
+    if(Gameboard.gameboard[spot])
+        return false
+    return true
+}
+
+function markSpot(spot, marker){
+    Gameboard.gameboard[spot] = marker
+}
+
+function setSpot(spot){
+    playerMove.spot = spot
+}
+
+function getMarker(){
+    return playerMove.marker
+}
+
+function incrementMoveCounter(){
+    Gameboard.moveCounter++
+}
+
+function getGameStatus(){
+    return Gameover.status
+}
+
+function resetBoard(){
+    Gameover.status = false
+    Gameboard.moveCounter = 0
+    Gameboard.gameboard = generateGameboard()
+
+    playerMove.marker = Gameboard.player1.marker
+    playerMove.spot = null
+    playerMove.playerOneTurn = true
+}
+
+export {
+    playerMove,
+    checkMove,
+    markSpot,
+    setSpot,
+    getMarker,
+    incrementMoveCounter,
+    playRound,
+    getGameStatus,
+    resetBoard,
+}
