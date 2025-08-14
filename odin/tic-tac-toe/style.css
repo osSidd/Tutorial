@@ -28,3 +28,11 @@ body{
 .tiles:hover{
     background-color: azure;
 }
+
+@media(max-width:768px){
+    .game-container{
+        width: 90vw;
+        height: 90vw;
+       
+    }
+}
